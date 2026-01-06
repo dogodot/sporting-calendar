@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "generate-posters": "npx tsx scripts/generate-posters.ts",
-    "create-placeholders": "npx tsx scripts/create-placeholders.ts"
+    "create-placeholders": "npx tsx scripts/create-placeholders.ts",
+    "sync-strava": "npx tsx scripts/sync-strava.ts"
   },
   "dependencies": {
     "@google/genai": "^1.34.0",

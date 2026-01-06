@@ -6,8 +6,10 @@ import { ChevronDown } from "lucide-react";
 import { events } from "@/lib/data";
 import EventCard from "@/components/EventCard";
 import NavigationDots from "@/components/NavigationDots";
+import SplashScreen from "@/components/SplashScreen";
 
 export default function Home() {
+  const [showSplash, setShowSplash] = useState(true);
   const [activeIndex, setActiveIndex] = useState(0);
   const [showScrollHint, setShowScrollHint] = useState(true);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -61,6 +63,9 @@ export default function Home() {
   // Keyboard navigation
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
+      // Disable keyboard nav while splash is showing
+      if (showSplash) return;
+
       if (e.key === "ArrowDown" || e.key === "j") {
         e.preventDefault();
         if (activeIndex < events.length - 1) {
@@ -76,10 +81,17 @@ export default function Home() {
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [activeIndex, navigateToEvent]);
+  }, [activeIndex, navigateToEvent, showSplash]);
 
   return (
     <>
+      {/* Splash screen */}
+      <AnimatePresence>
+        {showSplash && (
+          <SplashScreen onEnter={() => setShowSplash(false)} />
+        )}
+      </AnimatePresence>
+
       {/* Main scrolling container */}
       <main
         ref={containerRef}
@@ -95,6 +107,8 @@ export default function Home() {
         events={events}
         activeIndex={activeIndex}
         onNavigate={navigateToEvent}
+        onHome={() => setShowSplash(true)}
+        showSplash={showSplash}
       />
 
       {/* Scroll hint - shows on first load */}
