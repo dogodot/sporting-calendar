@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1200" viewBox="0 0 800 1200">
+  <defs>
+    <linearGradient id="bg-december" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="50%" style="stop-color:#16213e"/>
+      <stop offset="100%" style="stop-color:#0f3460"/>
+    </linearGradient>
+    <linearGradient id="accent-december" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#32CD32;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#32CD32;stop-opacity:0.4"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="1200" fill="url(#bg-december)"/>
+
+  <!-- Geometric shapes -->
+  <circle cx="600" cy="200" r="150" fill="#32CD32" opacity="0.1"/>
+  <circle cx="200" cy="1000" r="200" fill="#32CD32" opacity="0.08"/>
+  <rect x="0" y="500" width="800" height="4" fill="url(#accent-december)"/>
+  <rect x="0" y="700" width="600" height="2" fill="#32CD32" opacity="0.3"/>
+
+  <!-- Month text -->
+  <text x="400" y="620" font-family="Inter, Arial, sans-serif" font-size="180" font-weight="900" fill="none" stroke="#32CD32" stroke-width="2" text-anchor="middle" opacity="0.6">
+    DEC
+  </text>
+
+  <!-- Year -->
+  <text x="400" y="720" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="300" fill="white" text-anchor="middle" opacity="0.4">
+    2026
+  </text>
+
+  <!-- Decorative lines -->
+  <line x1="100" y1="100" x2="200" y2="100" stroke="#32CD32" stroke-width="3"/>
+  <line x1="100" y1="100" x2="100" y2="200" stroke="#32CD32" stroke-width="3"/>
+  <line x1="700" y1="1100" x2="600" y2="1100" stroke="#32CD32" stroke-width="3"/>
+  <line x1="700" y1="1100" x2="700" y2="1000" stroke="#32CD32" stroke-width="3"/>
+</svg>
