@@ -119,7 +119,7 @@ export const events: SportingEvent[] = [
     status: "upcoming",
     date: "February 7, 2026",
     stats: {
-      distance: "4-5 km",
+      distance: "5 km",
     },
     story: "We're heading to Iceland for something truly magical - the Northern Lights Run through downtown Reykjavik! Starting at 7pm from the Reykjavik Art Museum, this isn't about times or competition; it's about experiencing the city in an entirely new light. We'll be weaving through illuminated streets past the iconic Harpa concert hall, passing through fun stations surrounded by lights, music, and performing arts. Part of the Reykjavik Winter Lights Festival in its 19th year, each runner becomes part of the show with glowing merchandise included in registration. A 4-5K adventure that's all about feeling alive, having fun, and making memories together in one of the world's most spectacular settings.",
     images: ["/posters/february.svg"],
