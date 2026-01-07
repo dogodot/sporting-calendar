@@ -129,13 +129,17 @@ export const events: SportingEvent[] = [
   {
     id: "mar-2026",
     month: "March",
-    title: "TBC",
-    location: "TBC",
+    title: "Hyrox London Mixed Doubles",
+    location: "Olympia, London",
     status: "upcoming",
-    date: "March 15, 2026",
-    story: "",
+    date: "March 26, 2026",
+    stats: {
+      distance: "8 km",
+    },
+    story: "Third time's the charm! We're heading back to Hyrox for another shot at the elusive sub-90 minute finish. The format is brutal but addictive: 8 x 1km runs interspersed with 8 functional workout stations - SkiErg, sled push, sled pull, burpee broad jumps, rowing, farmers carry, sandbag lunges, and the dreaded wall balls. As Mixed Doubles, we'll be tackling each station together, splitting the reps and pushing each other through. Olympia's industrial halls will echo with the roar of thousands of athletes suffering through the same beautiful chaos. After two attempts that came agonisingly close, we know exactly where we need to find those precious seconds.",
     images: ["/posters/march.svg"],
     themeColor: "#FF1744",
+    website: "https://hyrox.com",
   },
   {
     id: "apr-2026",
